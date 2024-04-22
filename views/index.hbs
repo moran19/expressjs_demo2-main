@@ -1,0 +1,20 @@
+<h1>{{title}}</h1>
+<p><b>{{photos.length}}</b> photo in your album</p>
+<hr />
+<div class="container text-center">
+  <div class="row justify-content-md-center">
+    {{#each photos}}
+        <div class="col col-12 col-md-6 col-lg-4 col-xl-3">
+          <div>
+            <img class="img-fluid" src="./images/{{this.file_name}}" alt="{{ this.title }}" />
+          </div>
+          <div><b>{{ this.title }} </b></div>
+          <div><em>by {{ this.taken_by }}</em> </div>
+        </div>
+    {{/each}}   
+
+  </div>
+</div>
+<hr>
+
+
